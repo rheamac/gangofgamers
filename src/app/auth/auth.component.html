@@ -1,0 +1,15 @@
+
+
+<div class="card">
+  <div class="card-body">
+    <div class="form-signin">
+      <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">Sign in with Google</button><br /><br />
+    </div>
+    <div *ngIf="user">
+      <img src="{{ user.photoUrl }}">
+      <h4>{{ user.name }}</h4>
+      <p>{{ user.email }}</p>
+      <button (click)="signOut();">Sign out</button><br /><br />
+    </div>
+  </div>
+</div>
