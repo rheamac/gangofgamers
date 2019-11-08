@@ -8,6 +8,7 @@ import { AuthComponent } from './auth/auth.component';
 import { SocialLoginModule, AuthServiceConfig } from "angular4-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-login";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
 
 let config = new AuthServiceConfig([
   {
@@ -26,7 +27,8 @@ export function provideConfig() {
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
+    GoogleMapsComponent
   ],
   imports: [
     BrowserModule,
