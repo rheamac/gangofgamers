@@ -1,10 +1,11 @@
-
-
-<div class="card">
-  <div class="card-body">
     <div class="form-signin">
-      <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">Sign in with Google</button><br /><br />
+      <!-- <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle()">Sign in with Google</button><br /><br /> -->
+      <div class="text-center social-btn">
+        <button class="btn btn-danger btn-block" (click)="signInWithGoogle()"><i class="fa fa-google"></i> Sign in with <b>Google</b></button>
+      </div>
     </div>
+    <!-- <div class="card">
+      <div class="card-body">
     <div *ngIf="user">
       <img src="{{ user.photoUrl }}">
       <h4>{{ user.name }}</h4>
@@ -12,4 +13,4 @@
       <button (click)="signOut();">Sign out</button><br /><br />
     </div>
   </div>
-</div>
+</div> -->

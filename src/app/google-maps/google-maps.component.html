@@ -1,1 +1,30 @@
-<p>google-maps works!</p>
+<!-- <div class="row">
+  <div class=".col-sm-3">
+    Hellow 
+  </div>
+  <div class=".col-sm-9"> -->
+  <agm-map [latitude] ="latitude" [longitude] = "longitude" (mapClick)="onChooseLocation($event)">
+    <agm-marker *ngFor="let m of userDetails1;"
+    [latitude] ="m.location.latitude"
+    [longitude] = "m.location.longitude" [label] ="m.lab"
+    [iconUrl]="'https://picsart.com/i/sticker-scorpion-mk11-emoji-freetoedit-295830538075211'"
+    >
+
+    </agm-marker>
+    <agm-marker
+    [latitude] ="lat"
+    [longitude] = "lng" 
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'"
+    [label] ="'Your location'">
+
+    </agm-marker>
+    <agm-circle [latitude]="lat" [longitude]="lng"
+  [(radius)]="circleRadius"
+  [fillColor]="'blue'"
+  [circleDraggable]="true"
+  [editable]="true"></agm-circle>
+</agm-map>
+<!-- </div> -->
+<!-- </div> -->
+
+

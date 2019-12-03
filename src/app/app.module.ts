@@ -9,6 +9,13 @@ import { SocialLoginModule, AuthServiceConfig } from "angular4-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-login";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import {AgmCoreModule} from '@agm/core';
+import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './main-page/main-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { GeoPlacesComponent } from './geo-places/geo-places.component';
 
 let config = new AuthServiceConfig([
   {
@@ -28,13 +35,19 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     AuthComponent,
-    GoogleMapsComponent
+    GoogleMapsComponent,
+    LoginComponent,
+    MainPageComponent,
+    GeoPlacesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SocialLoginModule.initialize(config),
-    FontAwesomeModule
+    FontAwesomeModule,
+    AgmCoreModule.forRoot(),
+    HttpClientModule,
+    FormsModule
     //SocialLoginModule
   ],
   providers: [ {
